@@ -52,7 +52,6 @@ int find_skt(char* uname){
 #define BUFSIZE (1024*64)
 void* client_thread(void* param){
 	struct clinfo *ctp = (struct clinfo*)param;
-	char buffer[BUFSIZE];
 	int cfd = ctp->skt;
 	size_t readlen;
 	uint16_t type = 0;
