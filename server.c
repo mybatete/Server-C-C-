@@ -52,8 +52,6 @@ int find_skt(char* uname){
 #define BUFSIZE (1024*64)
 void* client_thread(void* param){
 	struct clinfo *ctp = (struct clinfo*)param;
-	pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
-	// ctp->personal_mutex =mtx;
 	char buffer[BUFSIZE];
 	int cfd = ctp->skt;
 	size_t readlen;
